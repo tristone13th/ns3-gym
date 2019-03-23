@@ -1713,6 +1713,8 @@ TcpSocketBase::ReceivedAck (Ptr<Packet> packet, const TcpHeader& tcpHeader)
   SendPendingData (m_connected);
 }
 
+
+// 当接收到一个ACK时，对该ACK进行处理
 void
 TcpSocketBase::ProcessAck (const SequenceNumber32 &ackNumber, bool scoreboardUpdated,
                            const SequenceNumber32 &oldHeadSequence)
